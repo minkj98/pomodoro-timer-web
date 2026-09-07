@@ -28,6 +28,15 @@ h1 {
   margin-bottom: 24px;
 }
 
+.clock {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
 .time {
   font-size: 6rem;
   font-weight: 700;

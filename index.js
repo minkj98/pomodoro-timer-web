@@ -8,6 +8,18 @@ let remaining =
 let intervalId = null;
 
 const timeEl = document.getElementById("time");
+const clockEl = document.getElementById("clock");
+
+function renderClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, "0");
+  const m = String(now.getMinutes()).padStart(2, "0");
+  const s = String(now.getSeconds()).padStart(2, "0");
+  clockEl.textContent = `${h}:${m}:${s}`;
+}
+
+renderClock();
+setInterval(renderClock, 1000);
 
 function save() {
   localStorage.setItem(REMAINING_KEY, String(remaining));
